@@ -1,0 +1,201 @@
+:root {
+    --main-color: #E9F2FF;
+    --secondary-color: #1D3984;
+    --text-color: #101C42;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/*Qr Code style */
+.qrcode{
+    position: absolute;
+    left: 0px;
+    bottom: 0vh;
+    z-index: 6;
+    display: flex;
+    height: 50%;
+    width: 40vh;
+    background-color: rgb(6 11 125);
+    clip-path: polygon(0px 75%, 56% 74%, 40% 100%, 0px 100%);
+    justify-content: center;
+}
+
+.qrcode img {
+    width: auto;
+    position: relative;
+    height: 20%;
+    right: 25%;
+    top: 77%;
+}
+
+/*image slider style*/
+.image-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 61% 555%, 0 0, 0% 0, 0% 100%, 0 100%);
+    z-index: 2;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container img:first-child {
+    display: block;
+}
+/*the box of dots */
+.dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 65%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    border: 2.3px solid var(--main-color);
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.dot.active {
+    background-color: var(--main-color);
+}
+
+/*the box of information (contain logo and qr-code )*/
+.info{
+    color: var(--text-color);
+    overflow: hidden;
+    background-color: var(--main-color);
+    width: 80vw;
+    height: 100vh;
+        clip-path: polygon(0 0, 68% 0, 42% 100%, 0% 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-family: 'Mulish', 'Open Sans', sans-serif;
+    }
+    
+    
+.info h2{
+    position: relative;
+    top: 25%;
+    left: 3%;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 1rem;
+    width: 50%;
+}
+
+.info p{
+    position: relative;
+    top: 25%;
+    left: 3%;
+    font-size: 1.5rem;
+    margin: 0;
+    width: 45%;
+}
+
+@media screen and (max-width: 768px) {
+    .image-slider {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .image-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: brightness(0.47);
+        -webkit-filter: brightness(0.47);
+}
+    .dots{
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .dot{
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 2px solid lightgray;
+        border-radius: 50%;
+        background-color: transparent;
+        margin: 0 0.6rem;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        clip-path: polygon(0 27%, 100% 27%, 100% 78%, 0 78%);
+        background-color: transparent;
+        color: whitesmoke;
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+        width: 100%;
+}
+    .info h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        left: 3%;
+        width: 70%;
+    }
+    .info p {
+        font-size: 1.2rem;
+        width: 85%;
+        display: flex;
+    }
+
+    .qrcode {
+        height: 10%;
+        width: 100px;
+        left: 40%;
+        bottom: 13%;
+        clip-path: border-box;
+        background-color: transparent;
+
+    }
+    .qrcode img {
+        width: 100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+    }
+
+
+}

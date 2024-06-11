@@ -1,0 +1,282 @@
+:root {
+    --main-color: #E9F2FF;
+    --secondary-color: #1D3984;
+    --text-color: #101C42;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-corner {
+    background: #59bada;
+    cursor: pointer;
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+
+::-webkit-scrollbar-track {
+    background:#e9f2ff;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #59bada;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    color: #101C42;
+}
+
+.info {
+    color: var(--text-color);
+    padding: 0.625rem;
+    text-align: center;
+    font-family: 'Mulish', 'Open Sans', sans-serif;
+}
+
+.info p{
+    font-size: 1.35rem;
+
+}
+
+
+.team {
+    background-color: var(--main-color);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.team-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .team-section {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media only screen and (min-width: 1330px) {
+    .team-section {
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    }
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+    border: 2.5px solid #6EE8F8;
+    padding: 1px;
+    background-color: transparent;
+}
+
+.memberName {
+    color: #003D70;
+    margin-top: 7px;
+    font-size: 20px;
+}
+
+.jobTitle {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.team-title {
+    color: #003D70;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin-right: 23px;
+    color: #ffffff;
+    font-size: 20px;
+    display: inline-block;
+    width: 1.9rem;
+    height: 1.9rem;
+    text-align: center;
+    line-height: 1.7rem;
+    border-radius: 50%;
+    background-color: #6EE8F8;
+}
+
+#icon1:hover {
+    background-color: #d62976;
+}
+
+@media only screen and (max-width: 768px) {
+    .social-icons a {
+        margin-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .social-icons a {
+        margin-right: 10px;
+    }
+
+    .m_v{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.split {
+    height: 50px;
+}
+.footer {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 0.625rem;
+    text-align: center;
+    font-family: 'Mulish', 'Open Sans', sans-serif;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact,
+.quick-links {
+    flex: 1;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.contact-columns {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    column-gap: 18%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.icon {
+    margin-bottom: 30px;
+}
+
+.icon a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon i {
+    margin-right: 10px;
+}
+.contact h3,
+.quick-links h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-left: 0rem;
+    margin-bottom: 10px;
+
+}
+
+.quick-links p {
+    font-size: 1.25rem;
+    margin: 1.25rem;
+}
+
+.contact a,
+.quick-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.iconName{
+    font-size: 1.25rem;
+}
+
+
+.copyrights {
+    background-color: var(--secondary-color);
+    color: lightgray; 
+    padding: 0.625rem;
+    text-align: center; 
+    padding-top: 5px;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact,
+    .quick-links {
+        width: 100%;
+        padding: 0; 
+        margin: 0;
+    }
+
+    .contact h3,
+    .quick-links h3 {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .contact-columns {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 7%;
+        column-gap: 0;
+    }
+
+    .column {
+        flex-direction: row;
+        margin-bottom: 0; 
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
+
+    span{
+        display: none;
+    }
+
+}

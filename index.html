@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insight Learn</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      class ScriptLoader {
+        static loadScript(e, t = null) {
+          return new Promise((o) => {
+            const a = document.createElement("script");
+            a.type = "text/javascript";
+            a.readyState
+              ? (a.onreadystatechange = function () {
+                  if (a.readyState === "loaded" || a.readyState === "complete") {
+                    a.onreadystatechange = null;
+                    o();
+                  }
+                })
+              : (a.onload = function () {
+                  o();
+                });
+            t && a.setAttribute("data-config", t);
+            a.src = e;
+            document.getElementsByTagName("head")[0].appendChild(a);
+          });
+        }
+      }
+      
+      function downloadAiSDK() {
+        if (ScriptLoader.p == null) {
+          ScriptLoader.p = ScriptLoader.loadScript(
+            "https://sdk.morphcast.com/mphtools/v1.1/mphtools.js",
+            "cameraPrivacyPopup, compatibilityUI, compatibilityAutoCheck"
+          )
+            .then(() => ScriptLoader.loadScript("https://ai-sdk.morphcast.com/v1.16/ai-sdk.js"))
+            .then(() => CY);
+        }
+        return ScriptLoader.p;
+      }
+      
+      downloadAiSDK().then((e) => {
+        e.loader()
+          .licenseKey("skd4ef093129e77112d1825fb4c78033fd4adb5974deea")
+          .addModule(e.modules().FACE_AROUSAL_VALENCE.name, { smoothness: 0.7 })
+          .addModule(e.modules().FACE_ATTENTION.name, { smoothness: 0.83 })
+          .addModule(e.modules().FACE_EMOTION.name, { smoothness: 0.7 })
+          .addModule(e.modules().DATA_AGGREGATOR.name, {
+            initialWaitMs: 1000, // 1 second initial wait
+            periodMs: 5000, // 5 seconds aggregation period
+          })
+          .load()
+          .then(({ start }) => start());
+      
+        window.addEventListener(e.modules().EVENT_BARRIER.eventName, (e) => {
+          // Event handler for EVENT_BARRIER (console logging removed)
+        });
+      
+        window.addEventListener(e.modules().DATA_AGGREGATOR.eventName, (e) => {
+          // Event handler for DATA_AGGREGATOR (console logging removed)
+        });
+      
+        MphTools.CameraPrivacyPopup.setText({
+          title: "Allow us to use your camera",
+          description: "This experience is designed to be viewed with your camera on.",
+        });
+      });
+      </script>      
+  </body>
+</html>

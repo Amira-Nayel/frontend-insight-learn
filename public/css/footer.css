@@ -1,0 +1,142 @@
+/* footer Style*/
+
+:root {
+    --main-color: #E9F2FF;
+    --secondary-color: #060B7D;
+    --text-color: #101C42;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+
+.footer {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 0.625rem;
+    text-align: center;
+    font-family: 'Mulish', 'Open Sans', sans-serif;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact,
+.quick-links {
+    flex: 1;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.contact h3,
+.quick-links h3 {
+    margin-bottom: 10px;
+}
+
+.contact-columns {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    column-gap: 18%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.icon {
+    margin-bottom: 10px;
+}
+
+.icon a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon i {
+    margin-right: 10px;
+}
+.contact h3,
+.quick-links h3 {
+    font-size: 1.52rem;
+    margin-bottom: 0.625rem;
+    padding-left: 0rem;
+}
+
+.contact p,
+.quick-links p {
+    font-size: 0.94rem;
+    margin: 1.25rem;
+}
+
+.contact a,
+.quick-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.copyrights {
+    background-color: var(--secondary-color);
+    color: lightgray; 
+    padding: 0.625rem;
+    text-align: center; 
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact,
+    .quick-links {
+        width: 100%;
+        padding: 0; 
+        margin: 0;
+    }
+
+    .contact h3,
+    .quick-links h3 {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .contact-columns {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 7%;
+        column-gap: 0;
+    }
+
+    .column {
+        flex-direction: row;
+        margin-bottom: 0; 
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
+
+    span{
+        display: none;
+    }
+
+}
+
+
+
+
+
