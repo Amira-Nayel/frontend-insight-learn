@@ -1,12 +1,13 @@
-MorphCast sdk implementation
+## MorphCast sdk implementation
+
 Prerequisites
 Before you begin, ensure you have met the following requirements:
 
 You have installed the latest version of Node.js and npm.
+you can download node.js from here:
+https://nodejs.org/en
 
-You have a Windows machine. This guide is written for Windows.
 Setting Up and Running the Project
-
 To set up and run the project, follow these steps:
 
 open up the folder of the code at the root directory which has index.html file
@@ -19,4 +20,4 @@ after the installation is done
 
 npm run dev
 
-Make sure the you change the license of morph cast sdk in the .env.local to your own license # frontend-insight-learn
+Make sure the you change the license of morph cast sdk in the .env.local to your own license
