@@ -21,3 +21,25 @@ after the installation is done
 npm run dev
 
 Make sure the you change the license of morph cast sdk in the .env.local to your own license
+
+
+Authors
+Ahmed Eid Ahmed Eid
+AhmedEid2504 
+
+Kerillos Samy Attia
+Kerillos-Attia
+
+Omnia
+
+
+Other Repositories
+Back-End
+https://github.com/Amira-Nayel/backend-insight-learn
+
+Machine Learning
+https://github.com/Amira-Nayel/machine-learning-insight-learn
+
+Server
+https://github.com/Amira-Nayel/infrastructure-as-code-
+
