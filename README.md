@@ -1,4 +1,4 @@
-## MorphCast sdk implementation
+## Front End Repository
 
 Prerequisites
 Before you begin, ensure you have met the following requirements:
@@ -22,24 +22,28 @@ npm run dev
 
 Make sure the you change the license of morph cast sdk in the .env.local to your own license
 
+## Technologies Used
+- Html
+- CSS
+- JS
+- React
+- Tailwind
+- Chart.js
+- Vercel
 
-Authors
-Ahmed Eid Ahmed Eid
-AhmedEid2504 
+## Contributors
 
-Kerillos Samy Attia
-Kerillos-Attia
+- Ahmed Eid Ahmed Eid(https://github.com/AhmedEid2504)
 
-Omnia
+- Kerillos Samy Attia(https://github.com/Kerillos-Attia)
+
+- Omnia Mohammed Mahmoud Salama
 
 
-Other Repositories
-Back-End
-https://github.com/Amira-Nayel/backend-insight-learn
+## You Can Access the rest of the project from here:
+[Back-End Repository](https://github.com/Amira-Nayel/backend-insight-learn)
 
-Machine Learning
-https://github.com/Amira-Nayel/machine-learning-insight-learn
+[Machine Learning Repository](https://github.com/Amira-Nayel/machine-learning-insight-learn)
 
-Server
-https://github.com/Amira-Nayel/infrastructure-as-code-
+[Infrastructure as code Repository](https://github.com/Amira-Nayel/infrastructure-as-code-)
 
